@@ -3,17 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 
-
 const Application = () => {
   const [name, setName] = useState();
 
-  const Button = props => {
+  const Button = () => {
     const resetForm = () => { setName('') };
     return <button onClick={resetForm}>RESET</button>;
   };
-
-
-
 
   return (
     <main>
@@ -24,10 +20,7 @@ const Application = () => {
         }}
         placeholder="Type Your Name"
       />
-      <Button name={name} />
-
-
-
+      <Button/>
       {name && <h1>Hello {name}</h1>}
     </main>
   );
